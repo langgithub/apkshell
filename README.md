@@ -22,4 +22,10 @@
 4. 重写签名apk文件
     * 签名命令
         > arsigner -verbose -keystore keystoreXXX -storepass 123456 -keypass 123456 -sigfile CERT -digestalg SHA1 -sigalg MD5withRSA -signedjar reforceapk_des.apk DecodeApkByAS.apk key1
-        > keystoreXXX 代码你自己的签名信息；storepass，keypass为密码；DecodeApkByAS.apk 源apk信息；reforceapk_des.apk 签名后的apk信息；key1 （看Android Studio签名apk）
+
+        解释：
+        1. keystoreXXX 代码你自己的签名信息；
+        2. storepass，keypass为密码；
+        3. DecodeApkByAS.apk 源apk信息；
+        4. reforceapk_des.apk 签名后的apk信息；
+        5. key1 （看Android Studio签名apk）
