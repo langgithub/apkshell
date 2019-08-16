@@ -46,3 +46,13 @@ parent:父classloader
 
 /frameworks/base/core/java/android/app/Activity.java
 > getApplication().dipatcherXX()
+
+### 总结
+1. 重写壳Application attachBaseContext 和 onCreate 并修改manifest.xml
+    * attachBaseContext
+        a. 加载dex文件，剥离壳dex和加密的源apk
+        b. 解密源apk输出到文件，并加载apk
+        c. 反射获取classloader 加载源apk MainActivity
+    * onCreate
+        d. 删除oldApplication
+        e. makeApplication
